@@ -1,0 +1,5 @@
+version: '3'
+services:
+  sync:
+    build: .
+    command: ["issue-sync"]
