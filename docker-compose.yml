@@ -1,5 +1,10 @@
-version: '3'
+version: '3.1'
 services:
   sync:
     build: .
-    command: ["issue-sync"]
+    command: ["go-wrapper", "run", "--config", "/run/secrets/config"]
+    secrets:
+      - config
+secrets:
+  config:
+    file: config.json
